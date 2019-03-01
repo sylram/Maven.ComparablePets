@@ -40,7 +40,7 @@ public class FishTest {
         //Given
         String givenName = "Victor";
         Fish fish = new Fish();
-        String fishSound = "glu"
+        String fishSound = "glu";
 
         //When
         String expected = fish.speak();
