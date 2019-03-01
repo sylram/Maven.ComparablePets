@@ -10,7 +10,7 @@ public class DogTest {
     public void getDogNameTest(){
         //Given
         String name = "Reina";
-        Dog dog = new Dog();
+        Dog dog = new Dog(name);
 
 
         //When
@@ -24,7 +24,7 @@ public class DogTest {
     @Test
     public void setDogNameTest(){
         //Given
-        Dog dog = new Dog();
+        Dog dog = new Dog(null);
         String name = "Cujo";
         dog.setName(name);
 
@@ -42,7 +42,7 @@ public class DogTest {
     public void getDogSpeakTest(){
         //Given
         String speak = "Woof!";
-        Dog dog = new Dog();
+        Dog dog = new Dog(null);
 
         //When
         String actualSpeak = dog.speak();
