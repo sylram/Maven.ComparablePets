@@ -9,7 +9,7 @@ public class FishTest {
     public void getNameTest(){
         //Given
         String givenName = "Victor";
-        Fish fish = new Fish();
+        Fish fish = new Fish(givenName);
 
         //When
         String expected = fish.getName();
@@ -28,7 +28,8 @@ public class FishTest {
         Fish fish = new Fish();
 
         //When
-        String expected = fish.setName();
+        fish.setName(givenName);
+        String expected = fish.getName();
 
         //Then
         Assert.assertEquals(givenName,expected);

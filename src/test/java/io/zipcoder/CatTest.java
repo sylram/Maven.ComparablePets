@@ -11,7 +11,7 @@ public class CatTest {
     public void getNameTest(){
         //Given
         String givenName = "Bella";
-        Cat cat = new Cat(null);
+        Cat cat = new Cat(givenName);
 
 
         //When
@@ -26,12 +26,13 @@ public class CatTest {
     @Test
     public void setNameTest(){
         //Given
-        String nameGiven = "Bella";
+
         Cat cat = new Cat(null);
+        String nameGiven = "Bella";
 
 
         //When
-        cat.setName();
+        cat.setName(nameGiven);
         String expected = cat.getName();
 
         //Then
