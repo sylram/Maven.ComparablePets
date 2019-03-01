@@ -12,10 +12,12 @@ public class PetsTest {
     @Test
     public void newPetDogTest(){
         //Given
+
         String name = "Max";
+        Dog dog = new Dog(name);
 
         //When
-        Dog dog = Pets.getNewPetDog(name);
+
         String actualName = dog.getName();
 
         //Then
@@ -29,7 +31,7 @@ public class PetsTest {
         String name = "Puss in Boots";
 
         //When
-        Cat cat = Pets.getNewPetCat(name);
+        Cat cat = new Cat (name);
         String actualName = cat.getName();
 
         //Then
@@ -41,9 +43,10 @@ public class PetsTest {
     public void newPetFishTest(){
         //Given
         String name = "Nemo";
+        Fish fish = new Fish(name);
 
         //When
-        Fish fish = Pets.getNewPetFish(name);
+
         String actualName = fish.getName();
 
         //Then
