@@ -48,10 +48,10 @@ public class CatTest {
 
 
         //When
-        String expected = cat.speak();
+        String actualSpeak = cat.speak();
 
         //Then
-        Assert.assertEquals(nameGiven,expected);
+        Assert.assertEquals(sound,actualSpeak);
     }
 
 }

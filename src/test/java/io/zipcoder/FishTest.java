@@ -25,7 +25,7 @@ public class FishTest {
     public void setNameTest(){
         //Given
         String givenName = "Victor";
-        Fish fish = new Fish();
+        Fish fish = new Fish(givenName);
 
         //When
         fish.setName(givenName);
@@ -36,16 +36,16 @@ public class FishTest {
 
     }
     @Test
-    public void fishSpeakTesh(){
+    public void fishSpeakTest(){
         //Given
         String givenName = "Victor";
-        Fish fish = new Fish();
+        Fish fish = new Fish(givenName);
         String fishSound = "glu";
 
         //When
-        String expected = fish.speak();
+        String actualSpeak = fish.speak();
 
         //Then
-        Assert.assertEquals(givenName,expected);
+        Assert.assertEquals(fishSound,actualSpeak);
     }
 }

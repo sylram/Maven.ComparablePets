@@ -3,9 +3,17 @@ package io.zipcoder;
 public class Fish extends Pets {
 
 
+    public Fish(String name) {
 
-    public String getName() {
+        super(name);
 
-        return null;
     }
+
+    public String speak(){
+
+        return "glu";
+
+    }
+
+
 }

@@ -2,8 +2,17 @@ package io.zipcoder;
 
 public class Cat extends Pets {
 
-    public class Cat(String name){
+    public Cat(String name) {
 
-        
+        super(name);
+
     }
+
+    public String speak(){
+
+        return "meow!";
+    }
+
+
+
 }
