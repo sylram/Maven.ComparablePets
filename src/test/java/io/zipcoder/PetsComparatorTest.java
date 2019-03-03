@@ -17,7 +17,7 @@ public class PetsComparatorTest {
         int expected = -1;
 
         //When
-        int actual = PetsComparator.compare(pet1, pet2);
+        int actual = pet1.compareTo(pet2);
 
         //Then
         Assert.assertEquals(expected, actual);
@@ -29,11 +29,11 @@ public class PetsComparatorTest {
 
         //Given
         Pets pet1 = new Pets("Max");
-        Pets pet2 = new Pets("Max")
+        Pets pet2 = new Pets("Max");
         int expected = 0;
 
         //When
-        int actual = PetsComparator.compare(pet1, pet2);
+        int actual = pet1.compareTo(pet2);
 
         //
         Assert.assertEquals(expected, actual);
@@ -45,21 +45,33 @@ public class PetsComparatorTest {
         public void comparePetsTest3(){
             //Given
             Pets pet1 = new Pets("Max");
-            Pets pet2 = new Pets("Ned"):
-            int expected = 1;
+            Pets pet2 = new Pets("Ned");
+            int expected = -1;
 
             //When
-            int actual = PetsComparator.compare(pet1, pet2);
+            int actual = pet1.compareTo(pet2);
 
             //Then
             Assert.assertEquals(expected,actual);
 
-
-
-
         }
 
+        @Test
+        public void comparePetsTest4(){
+        //Given
+        Pets pet1 = new Pets("Max");
+        Pets pet2 = new Pets("Ned");
 
+
+
+        //When
+        PetsComparator comparator = new PetsComparator();
+
+
+        //Then
+
+
+    }
 
 
 }

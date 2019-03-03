@@ -1,21 +1,30 @@
 package io.zipcoder;
+import java.util.ArrayList;
+import java.util.Collections;
+
 import java.lang.Comparable;
-import java.util.Comparator;
 
 
-public class Pets {
+public class Pets implements Comparable<Pets>{
 
     String name;
+    ArrayList petsData;
+
+
 
     public Pets(String name){
         this.name = name;
+
     }
 
+    
 
 
     public void setName(String name) {
+
         this.name = name;
     }
+
 
     public String getName() {
         return name;
@@ -23,6 +32,17 @@ public class Pets {
 
 
     public String speak() {
-        return null;
+        return "sound";
     }
+
+    public int compareTo(Pets p){
+        int byName = this.name.compareTo(p.getName());
+        return byName ;
+
+    }
+    public void sortPets(){
+        Collections.sort(petsData);
+
+    }
+
 }

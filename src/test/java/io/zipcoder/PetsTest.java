@@ -4,6 +4,8 @@ package io.zipcoder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class PetsTest {
 
     private String name;
@@ -51,6 +53,32 @@ public class PetsTest {
 
         //Then
         Assert.assertEquals(name, actualName);
+
+
+    }
+
+    @Test
+    public void sortPetsTest(){
+        //Given
+        String name = "Nemo";
+        String name2 = "Gloria";
+        String name3 = "Zula";
+
+        Pets fish = new Fish(name);
+        Pets cat = new Cat(name2);
+        Pets dog = new Dog (name3);
+        Pets mascotas = new Pets(null);
+
+
+        //When
+
+        mascotas.sortPets();
+
+        fish.petsData.add(dog);
+
+
+        //Then
+
 
 
     }
