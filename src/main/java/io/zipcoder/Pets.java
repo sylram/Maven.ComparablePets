@@ -8,28 +8,20 @@ import java.lang.Comparable;
 public class Pets implements Comparable<Pets>{
 
     String name;
-    ArrayList petsData;
 
 
-
-    public Pets(String name){
+    public Pets(String name) {
         this.name = name;
-
     }
-
-    
-
 
     public void setName(String name) {
 
         this.name = name;
     }
 
-
     public String getName() {
         return name;
     }
-
 
     public String speak() {
         return "sound";
@@ -40,9 +32,10 @@ public class Pets implements Comparable<Pets>{
         return byName ;
 
     }
-    public void sortPets(){
-        Collections.sort(petsData);
 
+    @Override
+    public String toString() {
+        return
+                "name='" + name + '\'';
     }
-
 }

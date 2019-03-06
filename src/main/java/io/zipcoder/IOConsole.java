@@ -11,6 +11,7 @@ public class IOConsole {
 
     public IOConsole() {
         this(System.in, System.out);
+
     }
 
     public IOConsole(InputStream inputStream, OutputStream outputStream) {
@@ -29,18 +30,16 @@ public class IOConsole {
      */
     public void print(String val, Object... args) {
         out.format(val, args);
+
     }
-
-
-
 
     /**
      * @param val  : text to display on console
-     * @param args : optional arguments to send for string formatting
+     * @param vals : optional arguments to send for string formatting
      */
-    public void println(String val, Object... args) {
-        out.format(val+ "\n", args);
-        out.println();
+    public void println(String val, Object... vals) {
+        out.format(val+ "\n", vals);
+
 
     }
 
@@ -50,8 +49,8 @@ public class IOConsole {
      * @return user's input as String
      */
     public String getStringInput(String prompt, Object... args) {
-        print(prompt, args);
-        return scanner.nextLine();
+        println(prompt, args);
+        return scanner.next();
 
     }
 
@@ -61,7 +60,7 @@ public class IOConsole {
      * @return user's input as integer
      */
     public Integer getIntegerInput(String prompt, Object... args) {
-        print(prompt, args);
+        println(prompt, args);
         return scanner.nextInt();
     }
 

@@ -72,9 +72,9 @@ public class PetsTest {
 
         //When
 
-        mascotas.sortPets();
 
-        fish.petsData.add(dog);
+
+
 
 
         //Then
