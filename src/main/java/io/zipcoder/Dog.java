@@ -1,8 +1,6 @@
 package io.zipcoder;
 
-import org.junit.jupiter.api.Test;
-
-public class Dog extends Pets {
+public class Dog extends Pet {
 
 
     public Dog(String name) {
@@ -13,4 +11,6 @@ public class Dog extends Pets {
     public String speak() {
         return "Woof!";
     }
+
+
 }

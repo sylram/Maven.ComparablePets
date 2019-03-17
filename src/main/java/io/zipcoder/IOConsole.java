@@ -1,4 +1,5 @@
 package io.zipcoder;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -38,7 +39,7 @@ public class IOConsole {
      * @param vals : optional arguments to send for string formatting
      */
     public void println(String val, Object... vals) {
-        out.format(val+ "\n", vals);
+        out.format(val + "\n", vals);
 
 
     }

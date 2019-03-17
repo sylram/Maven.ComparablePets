@@ -6,21 +6,21 @@ import java.util.*;
 public class Application {
     String type;
     String name;
-    Pets pet;
+    Pet pet;
     IOConsole console;
-    ArrayList<Pets> yourPets;
+    ArrayList<Pet> yourPets;
 
 
     public static void main(String[] args) {
         Application app = new Application();
-        app.toString();
+        app.printResults();
     }
 
 
     public Application() {
         console = new IOConsole();
-        yourPets = new ArrayList<Pets>();
-        Integer numberOfPets = console.getIntegerInput("Please enter the number of Pets");
+        yourPets = new ArrayList<Pet>();
+        Integer numberOfPets = console.getIntegerInput("Please enter the number of Pet");
 
         for (int i = 0; i < numberOfPets; i++) {
             String name = console.getStringInput("What's the name of your pet");
@@ -42,12 +42,13 @@ public class Application {
 //            console.println(yourPets.toString());
     }
 
-    @Override
-    public String toString() {
-        return
-                "type='" + type + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+    public void printResults(){
+        console.println("PETS");
+        for (Pet p: yourPets) {
+            console.println(p.getName());
+
+        }
+
     }
 
 }
